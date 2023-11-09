@@ -297,3 +297,42 @@ flex-direction: column;
 .container__login form label {
 	margin-bottom: 7px;
 }
+.error_message {
+	color: red;
+	margin-bottom: 40px;
+	padding: 10px 20px;
+	font-size : 15px;
+	background: rgba(255, 0, 0, .1);
+	font-weight: bold;
+    border-radius: 12px;
+}
+.display_none {
+	display:none;
+}
+.editor{
+	width: auto;
+	height: 59px;
+	background-color: black;
+}
+.editorparagraphe{
+	color: white;
+	text-align: center;
+}
+.display_none {
+	display:none;
+}
+.editor-black {
+	background-color: black;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 11px;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: "Work Sans";
+	width: 100%;
+	margin: 0px;
+	position: sticky;
+	top: 0px;
+}

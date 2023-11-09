@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
+	<div class="editor-black display_none">
+		<p class="editorparagraphe">Mode édition</p>
+	</div>
 <header>
 	<a href="index.html"><h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1></a>
 	<nav>
@@ -36,6 +39,10 @@
 	</section>
 	<section id="portfolio">
 		<h2>Mes Projets</h2>
+		<button class="button-modifier display_none">
+			<i class="fa-solid fa-pen-to-square"></i>
+			<span class="editon-modifier"> modifier</span>
+		</button>
 		<div class="filters">
 			<button class="filter__btn filter__btn-id-null filter__btn--active">Tous</button>
 			<button class="filter__btn filter__btn-id-1">Objets</button>
@@ -69,5 +76,5 @@
 </footer>
 </body>
 <script src="./script.js"></script>
-<script src="./modale.js"></script>
+<script src="./login.js"></script>
 </html>
