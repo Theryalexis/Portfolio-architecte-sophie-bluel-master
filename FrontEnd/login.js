@@ -1,6 +1,7 @@
 let btnconnection = document.querySelector("login-button");
 
 async function login() {
+  console.log(document.getElementById("email").value);
   let emailinput = document.getElementById("email").value;
   let passwordinput = document.getElementById("password").value;
   try {
@@ -14,7 +15,7 @@ async function login() {
         password: passwordinput,
       }),
     });
-
+    console.log("debug", emailinput, passwordinput);
     if (response.status !== 200) {
       throw new Error("Le login ou le mot de passe est incorrect");
     }
@@ -30,6 +31,9 @@ async function login() {
 }
 
 document.body.onload = function () {
-  let loginFormulaire = document.getElementById("login-button");
-  loginFormulaire.addEventListener("click", login());
+  let loginFormulaire = document.querySelector("container__login,form");
+  loginFormulaire.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    login();
+  });
 };

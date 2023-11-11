@@ -6,13 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Work+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
 	<div class="editor-black display_none">
-		<p class="editorparagraphe">Mode édition</p>
+		<i class="fa-solid fa-pen-to-square white-icon"></i>
+		<span>Mode édition</span>
 	</div>
 <header>
 	<a href="index.html"><h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1></a>
@@ -20,7 +22,7 @@
 		<ul>
 			<a href="#portfolio"><li>projets</li></a>
 			<li><a href="#contact">contact</a></li>
-			<li><a href="login.html">login</a></li>
+			<li><a id="logout-nav" href="login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -38,11 +40,13 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<button class="button-modifier display_none">
-			<i class="fa-solid fa-pen-to-square"></i>
-			<span class="editon-modifier"> modifier</span>
-		</button>
+		<div class="container-modifier">
+			<h2>Mes Projets</h2>
+			<button class="button-modifier display_none">
+				<i class="fa-solid fa-pen-to-square"></i>
+				<span id="button_editor">modifier</span>
+			</button>
+		</div>
 		<div class="filters">
 			<button class="filter__btn filter__btn-id-null filter__btn--active">Tous</button>
 			<button class="filter__btn filter__btn-id-1">Objets</button>
@@ -77,4 +81,5 @@
 </body>
 <script src="./script.js"></script>
 <script src="./login.js"></script>
+<script src="./modale.js"></script>
 </html>

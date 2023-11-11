@@ -290,8 +290,8 @@ footer nav ul {
 }
 
 .container__login form {
-display: flex;
-flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .container__login form label {
@@ -306,9 +306,7 @@ flex-direction: column;
 	font-weight: bold;
     border-radius: 12px;
 }
-.display_none {
-	display:none;
-}
+
 .editor{
 	width: auto;
 	height: 59px;
@@ -317,9 +315,6 @@ flex-direction: column;
 .editorparagraphe{
 	color: white;
 	text-align: center;
-}
-.display_none {
-	display:none;
 }
 .editor-black {
 	background-color: black;
@@ -335,4 +330,38 @@ flex-direction: column;
 	margin: 0px;
 	position: sticky;
 	top: 0px;
+}
+.editor-black span{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.white-icon {
+	color: white;
+}
+.button-modifier {
+	display: flex;
+	gap: 11px;
+	font-family: "work sans";
+	font-size: 14px;
+	color: black;
+	font-weight: 400;
+	align-items: center;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+.button-modifier:hover {
+	cursor: pointer;
+}
+.container-modifier {
+	display: flex;
+	flex-direction: row;
+	gap: 31px;
+	margin-bottom: 1em;
+	justify-content: center;
+	align-items: baseline;
+}
+.display_none {
+	display:none;
 }
