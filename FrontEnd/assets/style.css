@@ -448,6 +448,7 @@ footer nav ul {
 	height: 104px;
 	flex-shrink: 0;
 	display: flex;
+	position: relative;
 }
 
 .modale1_content {
@@ -485,6 +486,20 @@ footer nav ul {
 	color: white;
 	background: #1D6154;
 	width: 237px;
+}
+.trashcan {
+	background-color: black;
+	color: white;
+	padding: 4px;
+    font-size: 10px;
+	position: absolute;
+    top: 6px;
+    right: 6px;
+    border-radius: 3px;
+}
+
+.trashcan:hover {
+	cursor: pointer;
 }
 .container_modale2 {
 	display: flex;

@@ -119,6 +119,9 @@ async function generationProjetsmodale(data) {
       img.alt = data[i].title;
       figure.appendChild(img);
       figure.classList.add("gallerymodale_image");
+      const trashCan = document.createElement("i");
+      figure.appendChild(trashCan);
+      trashCan.classList.add("trashcan", "fa-regular", "fa-trash-can");
     }
   }
 }
