@@ -107,6 +107,20 @@ line-height: normal;
 li:hover {
 	color: #B1663C;
 }
+nav ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+nav ul li a:hover {
+	text-decoration: none;
+	color: #B1663C;
+}
+
+nav ul li:hover {
+	color: #B1663C;
+	cursor: pointer;
+}
 a {
 	text-decoration: none;
 }
@@ -385,6 +399,7 @@ footer nav ul {
 	width: 100vw;
 	position: fixed;
 	background: rgba(0, 0, 0, .5);
+	left: 0px;
 }
 .modale1 {
 	display: flex;
@@ -509,6 +524,7 @@ footer nav ul {
 	width: 100vw;
 	position: fixed;
 	background: rgba(0, 0, 0, .5);
+	left: 0px;
 }
 
 .modale2 {
