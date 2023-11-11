@@ -4,6 +4,7 @@ const btnId2 = document.querySelector(".filter__btn-id-2");
 const btnId3 = document.querySelector(".filter__btn-id-3");
 
 const sectionProjets = document.querySelector(".gallery");
+const gallery_modale = document.querySelector(".modale1_gallery");
 
 let data = null;
 let id;
@@ -58,7 +59,6 @@ async function generationProjets(data, id) {
     for (let i = 0; i < data.length; i++) {
       const figure = document.createElement("figure");
       sectionProjets.appendChild(figure);
-      figure.classList.add(`js-projet-${data[i].id}`); // Ajoute l'id du projet pour le lien vers la modale lors de la supression
       const img = document.createElement("img");
       img.src = data[i].imageUrl;
       img.alt = data[i].title;
@@ -92,3 +92,33 @@ btnId3.addEventListener("click", () => {
   // Hôtels & restaurants
   generationProjets(data, 3);
 });
+
+/*-----------------------------------*/
+function resetSectionProjetsmodale() {
+  sectionProjets.innerHTML = "";
+}
+async function generationProjetsmodale(data) {
+  try {
+    const response = await fetch("http://localhost:5678/api/works");
+    data = await response.json();
+  } catch {
+    const p = document.createElement("p");
+    p.classList.add("error");
+    p.innerHTML =
+      "Une erreur est survenue lors de la récupération des projets<br><br>Si le problème persiste, veuillez contacter l'administrateur du site";
+    gallery_modale.appendChild(p);
+  }
+  resetSectionProjetsmodale();
+  // Génère les projets
+  if (token) {
+    for (let i = 0; i < data.length; i++) {
+      const figure = document.createElement("figure");
+      gallery_modale.appendChild(figure);
+      const img = document.createElement("img");
+      img.src = data[i].imageUrl;
+      img.alt = data[i].title;
+      figure.appendChild(img);
+      figure.classList.add("gallerymodale_image");
+    }
+  }
+}

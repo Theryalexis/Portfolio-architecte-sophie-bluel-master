@@ -439,18 +439,15 @@ footer nav ul {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 22px 10px;
-	padding-left: 105px;
-	padding-right: 105px;
+	padding-left: 100px;
+	padding-right: 100px;
 	padding-top: 46px;
 }
-.gallery-editor_img {
-	object-fit: cover;
-    align-self: stretch;
-}
-
-.container_imgstep1 {
-	position: relative;
-	width: 18%;
+.gallerymodale_image{
+	width: 78px;
+	height: 104px;
+	flex-shrink: 0;
+	display: flex;
 }
 
 .modale1_content {
@@ -488,6 +485,227 @@ footer nav ul {
 	color: white;
 	background: #1D6154;
 	width: 237px;
+}
+.container_modale2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background: rgba(0, 0, 0, .5);
+}
+
+.modale2 {
+	display: flex;
+	height: 688px;
+	width: 630px;
+	background-color: white;
+	z-index: 3;
+	flex-direction: column;
+	position: fixed;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	margin-top: 57px;
+}
+
+.modale2_header {
+	display: flex;
+	align-self: flex-end;
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modale2_cross {
+	margin-top: 26px;
+	margin-right: 30px;
+}
+
+.modale2_cross:hover {
+	cursor: pointer;
+}
+
+.modale2_arrow {
+	margin-top: 26px;
+	margin-left: 30px;
+}
+
+.modale2_arrow:hover {
+	cursor: pointer;
+}
+
+.modale2_title {
+	color: black;
+	font-family: Work Sans;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 10px;
+	margin-bottom: 36px;
+	text-align: center;
+}
+
+.modale2_content {
+	flex-grow: 4;
+	display: flex;
+	flex-direction: column;
+}
+#img_project {
+	overflow: hidden;
+	color: transparent;
+	width: 200px; 
+    height: 40px; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+	cursor: pointer; 
+	position: absolute;
+	opacity: 0;
+}
+
+.img_file_project {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    z-index: 10;
+	object-fit: cover;
+    align-self: stretch;
+}
+
+.container_file {
+	display: flex;
+    justify-content: center;
+	width: 420px;
+	height: 169px;
+	background: #E8F1F6;
+	position: relative;
+}
+
+
+.content_file:hover {
+	cursor: pointer;
+}
+
+.content_file {
+	z-index: 1;
+	height: 100%;
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}	
+
+.file_icon {
+	margin-top: 13px;
+	font-size: 76px;
+	color : #B9C5CC;
+	margin-bottom: 6px;
+}
+
+.button_file {
+	border-radius: 50px;
+	background: #CBD6DC;
+	color: #306685;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	padding : 10px 33px;
+	border: none;
+	outline: none;
+	margin-bottom: 7px;
+}
+
+.info_file {
+	font-family: Work Sans;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	color: black;
+}
+
+.modale2_footer {
+	margin-bottom: 45px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.modale2_line {
+	margin-bottom: 38px;
+	width: 420px;
+}
+
+.modale2_button {
+	cursor: pointer;
+	border: 1px solid #1D6154;
+	border-radius : 60px;
+	outline: none;
+	text-align: center;
+	font-family: Syne;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	background: none;
+	padding : 9px 28px 9px 30px;
+	color: white;
+	background: #1D6154;
+	width: 237px;
+}
+
+.button_grey {
+	background: #A7A7A7;
+	border: none;
+}
+
+.button_grey:hover {
+	cursor: initial;
+}
+
+.form_file {
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+.input_style {
+	width: 420px;
+	height: 51px;
+	background: white;
+	box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+	flex-shrink: 0;
+	border: none;
+	outline: none;
+	margin-top: 10px;
+	margin-bottom: 21px;
+}
+
+.select_style {
+	width: 420px;
+	height: 51px;
+	background: white;
+	box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+	flex-shrink: 0;
+	border: none;
+	outline: none;
+	margin-top: 10px;
+}
+
+.label_style {
+	color: #3D3D3D;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
 }
 .display_none {
 	display:none;
