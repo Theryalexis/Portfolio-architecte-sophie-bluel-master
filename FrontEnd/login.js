@@ -1,5 +1,6 @@
 let btnconnection = document.querySelector("login-button");
 
+// fonction pour se connecter sur le site
 async function login() {
   console.log(document.getElementById("email").value);
   let emailinput = document.getElementById("email").value;

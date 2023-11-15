@@ -1,10 +1,9 @@
-//fonction pour l'ajout d'images
-
 const container_image = document.querySelector(".file_icon");
 const container_upload = document.querySelector(".button_file");
 const container_info = document.querySelector("#img_info");
 const preview_images = document.querySelector("#img_project");
 
+// fonction pour la preview de l'image charger
 function handleFiles(files) {
   var imageType = /^image\//;
   for (var i = 0; i < files.length; i++) {
@@ -38,7 +37,7 @@ function handleFiles(files) {
 const btnAjouterProjet = document.querySelector("#submit_Project");
 btnAjouterProjet.addEventListener("click", addWork);
 
-// Ajouter un projet
+// fonction pour ajouter un projet
 async function addWork(event) {
   event.preventDefault();
 
