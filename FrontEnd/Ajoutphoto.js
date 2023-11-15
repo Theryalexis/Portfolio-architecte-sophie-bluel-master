@@ -84,3 +84,16 @@ async function addWork(event) {
     }
   }
 }
+// Changement du bouton quand les 3 conditions sont ok
+document.forms[0].addEventListener("change", function (event) {
+  if (
+    document.getElementById("img_project").value != "" &&
+    document.getElementById("title-work").value != "" &&
+    (document.getElementById("liste-categories").value == 1 ||
+      document.getElementById("liste-categories").value == 2 ||
+      document.getElementById("liste-categories").value == 3)
+  ) {
+    event.preventDefault();
+    btnAjouterProjet.classList.remove("button_grey");
+  }
+});
