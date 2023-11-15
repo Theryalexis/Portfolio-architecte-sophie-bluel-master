@@ -122,6 +122,25 @@ async function generationProjetsmodale(data) {
       const trashCan = document.createElement("i");
       figure.appendChild(trashCan);
       trashCan.classList.add("trashcan", "fa-regular", "fa-trash-can");
+      trashCan.dataset.dataid = data[i].id;
+      trashCan.addEventListener("click", trashcanClicked);
     }
   }
+}
+//Fonction pour supprimer une images avec la requete api
+async function deletework(dataid) {
+  await fetch("http://localhost:5678/api/works/" + dataid, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+//fonction qui agit au click sur le trashcan
+async function trashcanClicked(event) {
+  const dataid = event.target.dataset.dataid;
+  const galleryStep1 = document.querySelector(".modale1_gallery");
+  await deletework(dataid);
+  galleryStep1.innerHTML = "";
+  generationProjetsmodale();
 }

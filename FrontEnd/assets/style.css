@@ -584,29 +584,6 @@ footer nav ul {
 	display: flex;
 	flex-direction: column;
 }
-#img_project {
-	overflow: hidden;
-	color: transparent;
-	width: 200px; 
-    height: 40px; 
-    padding: 10px; 
-    font-size: 16px; 
-    border: none; 
-    border-radius: 5px; 
-	cursor: pointer; 
-	position: absolute;
-	opacity: 0;
-}
-
-.img_file_project {
-    position: absolute;
-    width: auto;
-    height: 100%;
-    z-index: 10;
-	object-fit: cover;
-    align-self: stretch;
-}
-
 .container_file {
 	display: flex;
     justify-content: center;
@@ -615,8 +592,27 @@ footer nav ul {
 	background: #E8F1F6;
 	position: relative;
 }
-
-
+#preview{
+	width: 100%;
+	display: flex;
+    justify-content: center;
+  }
+#preview img{
+	width: 135px;
+  }
+#img_project {
+	overflow: hidden;
+	color: transparent;
+	width: 200px; 
+    height: 160px; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+	cursor: pointer; 
+	position: absolute;
+	opacity: 0;
+}
 .content_file:hover {
 	cursor: pointer;
 }
@@ -630,14 +626,6 @@ footer nav ul {
 	align-items: center;
 	position: relative;
 }	
-
-.file_icon {
-	margin-top: 13px;
-	font-size: 76px;
-	color : #B9C5CC;
-	margin-bottom: 6px;
-}
-
 .button_file {
 	border-radius: 50px;
 	background: #CBD6DC;
@@ -651,6 +639,13 @@ footer nav ul {
 	border: none;
 	outline: none;
 	margin-bottom: 7px;
+}
+
+.file_icon {
+	margin-top: 13px;
+	font-size: 76px;
+	color : #B9C5CC;
+	margin-bottom: 6px;
 }
 
 .info_file {
@@ -737,6 +732,10 @@ footer nav ul {
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
+}
+.imageajouter{
+	display: flex;
+	flex-direction: column;
 }
 .display_none {
 	display:none;

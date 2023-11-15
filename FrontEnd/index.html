@@ -42,28 +42,34 @@
 			</div>
 			<div class="modale2_content">	
 				<span class="modale2_title">Ajout photo</span>
-				<form id="formAddProjects" action="#" method="post">
+				<form id="formAddProjects" method="post">
 					<div class="container_file">
 						<div class="content_file">
-							<input type="file" id="img_project" name="img_project" accept="image/png, image/jpeg">
-							<label for="img_project"></label>
-							<i class="file_icon fa-regular fa-image"></i>
-							<div class="button_file">+ Ajouter photo</div>
-							<span class="info_file">jpg, png : 4mo max</span>
-						</div>	
+								<i class="file_icon fa-regular fa-image"></i>
+								<input  type="file" onchange="handleFiles(files)" id="img_project" name="file" accept="image/png, image/jpeg">
+								<label for="upload"><span id="preview"></span></label>
+								<div class="button_file">+ Ajouter photo</div>
+								<span  id="img_info" class="info_file">jpg, png : 4mo max</span>
+						</div>
 					</div>
 					<div class="form_file">
 						<label class="label_style" for="title-work">Titre</label>
 						<input class="input_style" type="text" id="title-work" name="title_work">
-						<label class="label_style" for="category_work">Catégorie</label>
-						<select class="select_style" id="category_work" name="category_work">
-						</select>	
+						<div class="imageajouter">
+							<label for="categorie" id="label_style" class="label-formulaire">Categorie</label>
+							<select name="categorie" id="liste-categories" class="select_style" type="text" required>
+								<option value="Champs-selection"></option>
+								<option value="1">Objets</option>
+								<option value="2">Appartements</option>
+								<option value="3">Hotel & Restaurants</option>
+							</select>
+						</div>	
 					</div>
 				</form>	
 			</div>
 			<div class="modale2_footer">
 				<hr class="modale2_line"/>	
-				<button type="submit" id="submit_Project" disabled class="modale2_button button_grey">Valider</button>
+				<button type="submit" id="submit_Project" class="modale2_button button_grey">Valider</button>
 			</div>	
 		</div>
 	</div>	
@@ -137,4 +143,5 @@
 <script src="./script.js"></script>
 <script src="./login.js"></script>
 <script src="./modale.js"></script>
+<script src="./Ajoutphoto.js"></script>
 </html>

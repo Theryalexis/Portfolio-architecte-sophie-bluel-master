@@ -18,7 +18,7 @@ document.body.onload = async function () {
   let loginout = document.getElementById("logout-nav");
   editorblack.classList.add("display_none");
   button_modifier.classList.add("display_none");
-  generationProjets();
+
   if (token) {
     editorblack.classList.remove("display_none"); // On retire le display none au bandeau noir pour le rendre visible //
     loginout.innerText = "logout";
@@ -30,8 +30,10 @@ document.body.onload = async function () {
     modale1_ajouter.addEventListener("click", display_modale2);
     modale2_fleche.addEventListener("click", return_modale1);
     modale2_fermer.addEventListener("click", fermeture_modale2);
-
     generationProjetsmodale();
+    generationProjets(data, null);
+    modale1.addEventListener("click", clickdehorsModale);
+    modale2.addEventListener("click", clickdehorsModale);
   }
 };
 //fonction pour afficher la modale 1
@@ -55,4 +57,13 @@ function return_modale1() {
 //fonction pour fermer la modale 2
 function fermeture_modale2() {
   modale2.classList.add("display_none");
+}
+//fonction pour fermer les modale en dehors du cadre
+async function clickdehorsModale(event) {
+  if (event.target === modale1) {
+    fermeture_modale1();
+  }
+  if (event.target === modale2) {
+    fermeture_modale2();
+  }
 }
