@@ -95,12 +95,12 @@ nav li {
 	font-size: 1.2em;
 	color: #000;
 
-text-align: center;
-font-family: Work Sans;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
 
 }
 
@@ -232,7 +232,6 @@ footer nav ul {
 .filter__btn:hover, .btn-admin:hover {
 	color: white;
 	background-color: #1D6154;
-	scale: 1.05;
   }
 .filters {
 	display: flex;

@@ -67,7 +67,7 @@ async function addWork(event) {
       });
 
       if (response.status === 201) {
-        alert("Projet ajouté avec succès :)");
+        alert("Projet ajouté avec succès");
         generationProjetsmodale();
         fermeture_modale2();
         generationProjets(data, null);

@@ -47,7 +47,7 @@
 						<div class="content_file">
 								<i class="file_icon fa-regular fa-image"></i>
 								<input  type="file" onchange="handleFiles(files)" id="img_project" name="file" accept="image/png, image/jpeg">
-								<label for="upload"><span id="preview"></span></label>
+								<label id="upload"><span id="preview"></span></label>
 								<div class="button_file">+ Ajouter photo</div>
 								<span  id="img_info" class="info_file">jpg, png : 4mo max</span>
 						</div>
@@ -56,9 +56,9 @@
 						<label class="label_style" for="title-work">Titre</label>
 						<input class="input_style" type="text" id="title-work" name="title_work">
 						<div class="imageajouter">
-							<label for="categorie" id="label_style" class="label-formulaire">Categorie</label>
-							<select name="categorie" id="liste-categories" class="select_style" type="text" required>
-								<option value="Champs-selection"></option>
+							<label id="label_style" class="label-formulaire" >Categorie</label>
+							<select name="categorie" id="liste-categories" class="select_style">
+								<option value="">Veuillez sélectionner la catégorie</option>
 								<option value="1">Objets</option>
 								<option value="2">Appartements</option>
 								<option value="3">Hotel & Restaurants</option>
@@ -81,7 +81,7 @@
 	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
 	<nav>
 		<ul>
-			<a href="#portfolio"><li>projets</li></a>
+			<li><a href="#portfolio">projets</a></li>
 			<li><a href="#contact">contact</a></li>
 			<li><a id="logout-nav" href="login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
@@ -139,9 +139,9 @@
 		</ul>
 	</nav>
 </footer>
-</body>
 <script src="./script.js"></script>
 <script src="./login.js"></script>
 <script src="./modale.js"></script>
 <script src="./Ajoutphoto.js"></script>
+</body>
 </html>
