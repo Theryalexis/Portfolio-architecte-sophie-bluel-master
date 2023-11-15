@@ -11,7 +11,7 @@ const modale2_fermer = document.querySelector(".modale2_cross");
 let loginout;
 
 function logout() {
-  sessionStorage.removeItem("token"); // on supprime le token du sessionStorage//
+  sessionStorage.removeItem("token");
   editorblack.classList.add("display_none");
 }
 document.body.onload = async function () {
@@ -20,10 +20,10 @@ document.body.onload = async function () {
   button_modifier.classList.add("display_none");
 
   if (token) {
-    editorblack.classList.remove("display_none"); // On retire le display none au bandeau noir pour le rendre visible //
+    editorblack.classList.remove("display_none");
     loginout.innerText = "logout";
     loginout.addEventListener("click", logout);
-    button_modifier.classList.remove("display_none"); // On enlève le display none au bouton modifier pour le rendre visible //
+    button_modifier.classList.remove("display_none");
     loginout.setAttribute("href", "./index.html");
     button_editor.addEventListener("click", display_modale1);
     modale1_fermer.addEventListener("click", fermeture_modale1);
