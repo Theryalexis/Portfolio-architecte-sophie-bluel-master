@@ -597,7 +597,9 @@ footer nav ul {
     justify-content: center;
   }
 #preview img{
-	width: 135px;
+	width: 30%;
+    object-fit: cover;
+    position: absolute;
   }
 #img_project {
 	overflow: hidden;
