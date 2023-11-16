@@ -94,9 +94,7 @@ btnId3.addEventListener("click", () => {
 });
 
 /*-----------------------------------*/
-function resetSectionProjetsmodale() {
-  sectionProjets.innerHTML = "";
-}
+
 async function generationProjetsmodale(data) {
   try {
     const response = await fetch("http://localhost:5678/api/works");
@@ -108,7 +106,6 @@ async function generationProjetsmodale(data) {
       "Une erreur est survenue lors de la récupération des projets<br><br>Si le problème persiste, veuillez contacter l'administrateur du site";
     gallery_modale.appendChild(p);
   }
-  resetSectionProjetsmodale();
   // Génère les projets
   if (token) {
     for (let i = 0; i < data.length; i++) {
@@ -122,8 +119,8 @@ async function generationProjetsmodale(data) {
       const trashCan = document.createElement("i");
       figure.appendChild(trashCan);
       trashCan.classList.add("trashcan", "fa-regular", "fa-trash-can");
-      trashCan.dataset.dataid = data[i].id;
       trashCan.addEventListener("click", trashcanClicked);
+      trashCan.dataset.dataid = data[i].id;
     }
   }
 }
@@ -143,4 +140,5 @@ async function trashcanClicked(event) {
   await deletework(dataid);
   galleryStep1.innerHTML = "";
   generationProjetsmodale();
+  generationProjets(data, null);
 }

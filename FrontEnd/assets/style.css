@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -30,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background: #FFFEF8;
 }
 ol, ul {
 	list-style: none;
@@ -152,7 +154,8 @@ a:visited{
 }
 #portfolio h2 {
 	text-align: center;
-	margin-bottom: 1em;
+	margin-bottom: 82px;
+	margin-top: 89px;
 }
 .gallery {
 	width: 100%;
@@ -237,6 +240,7 @@ footer nav ul {
 	display: flex;
 	justify-content: center;
 	margin: 40px 0;
+	margin-top: 0px;
   }
   
 .filter__btn, .btn-admin {
@@ -386,7 +390,6 @@ footer nav ul {
 	display: flex;
 	flex-direction: row;
 	gap: 31px;
-	margin-bottom: 1em;
 	justify-content: center;
 	align-items: baseline;
 }
